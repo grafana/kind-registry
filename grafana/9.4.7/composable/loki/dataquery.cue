@@ -26,9 +26,9 @@ kindsys.Composable & kindsys.Composable & {
 				// Used to override the name of the series.
 				legendFormat?: string
 				// Used to limit the number of log rows returned.
-				maxLines?: >=-9223372036854775808 & <=9223372036854775807 & int
+				maxLines?: int64
 				// Used to scale the interval value.
-				resolution?: >=-9223372036854775808 & <=9223372036854775807 & int
+				resolution?: int64
 				editorMode?: #QueryEditorMode
 				// @deprecated, now use queryType.
 				range?: bool

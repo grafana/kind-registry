@@ -22,7 +22,7 @@ lineage: {
 	seqs: [{
 		schemas: [{
 			// OrgId is the ID of an organisation the team belongs to.
-			orgId: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(ToMetadata="sys")
+			orgId: int64 @grafanamaturity(ToMetadata="sys")
 			// Name of the team.
 			name: string
 			// Email of the team.
@@ -30,7 +30,7 @@ lineage: {
 			// AvatarUrl is the team's avatar URL.
 			avatarUrl?: string @grafanamaturity(MaybeRemove)
 			// MemberCount is the number of the team members.
-			memberCount: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(ToMetadata="kind")
+			memberCount: int64 @grafanamaturity(ToMetadata="kind")
 			// TODO - it seems it's a team_member.permission, unlikely it should belong to the team kind
 			permission: #Permission @grafanamaturity(ToMetadata="kind", MaybeRemove)
 			// AccessControl metadata associated with a given resource.

@@ -35,7 +35,7 @@ kindsys.Composable & kindsys.Composable & {
 					// Filters to be included in a PromQL query to select data for the service graph. Example: {client="app",service="app"}
 					serviceMapQuery?: string
 					// Defines the maximum number of traces that are returned from Tempo
-					limit?: >=-9223372036854775808 & <=9223372036854775807 & int
+					limit?: int64
 					filters: [...#TraceqlFilter]
 				} @cuetsy(kind="interface") @grafana(TSVeneer="type")
 

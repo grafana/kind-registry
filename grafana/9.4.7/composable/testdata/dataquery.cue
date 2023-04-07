@@ -28,38 +28,38 @@ kindsys.Composable & kindsys.Composable & {
 				sim?:         #SimulationQuery
 				csvWave?: [...#CSVWave]
 				labels?:          string
-				lines?:           >=-9223372036854775808 & <=9223372036854775807 & int
+				lines?:           int64
 				levelColumn?:     bool
 				channel?:         string
 				nodes?:           #NodesQuery
 				csvFileName?:     string
 				csvContent?:      string
 				rawFrameContent?: string
-				seriesCount?:     >=-2147483648 & <=2147483647 & int
+				seriesCount?:     int32
 				usa?:             #USAQuery
 				errorType?:       "server_panic" | "frontend_exception" | "frontend_observable"
-				spanCount?:       >=-2147483648 & <=2147483647 & int
-				points?: [...[...string | int & >=-9223372036854775808 & <=9223372036854775807]]
+				spanCount?:       int32
+				points?: [...[...string | int64]]
 				#TestDataQueryType: "random_walk" | "slow_query" | "random_walk_with_error" | "random_walk_table" | "exponential_heatmap_bucket_data" | "linear_heatmap_bucket_data" | "no_data_points" | "datapoints_outside_range" | "csv_metric_values" | "predictable_pulse" | "predictable_csv_wave" | "streaming_client" | "simulation" | "usa" | "live" | "grafana_api" | "arrow" | "annotations" | "table_static" | "server_error_500" | "logs" | "node_graph" | "flame_graph" | "raw_frame" | "csv_file" | "csv_content" | "trace" | "manual_entry" | "variables-query" @cuetsy(kind="enum", memberNames="RandomWalk|SlowQuery|RandomWalkWithError|RandomWalkTable|ExponentialHeatmapBucketData|LinearHeatmapBucketData|NoDataPoints|DataPointsOutsideRange|CSVMetricValues|PredictablePulse|PredictableCSVWave|StreamingClient|Simulation|USA|Live|GrafanaAPI|Arrow|Annotations|TableStatic|ServerError500|Logs|NodeGraph|FlameGraph|RawFrame|CSVFile|CSVContent|Trace|ManualEntry|VariablesQuery")
 				#StreamingQuery: {
 					type:   "signal" | "logs" | "fetch"
-					speed:  >=-2147483648 & <=2147483647 & int
-					spread: >=-2147483648 & <=2147483647 & int
-					noise:  >=-2147483648 & <=2147483647 & int
-					bands?: >=-2147483648 & <=2147483647 & int
+					speed:  int32
+					spread: int32
+					noise:  int32
+					bands?: int32
 					url?:   string
 				} @cuetsy(kind="interface")
 				#PulseWaveQuery: {
-					timeStep?: >=-9223372036854775808 & <=9223372036854775807 & int
-					onCount?:  >=-9223372036854775808 & <=9223372036854775807 & int
-					offCount?: >=-9223372036854775808 & <=9223372036854775807 & int
-					onValue?:  >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308
-					offValue?: >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308
+					timeStep?: int64
+					onCount?:  int64
+					offCount?: int64
+					onValue?:  float64
+					offValue?: float64
 				} @cuetsy(kind="interface")
 				#SimulationQuery: {
 					key: {
 						type: string
-						tick: >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308
+						tick: float64
 						uid?: string
 					}
 					config?: {
@@ -70,7 +70,7 @@ kindsys.Composable & kindsys.Composable & {
 				} @cuetsy(kind="interface")
 				#NodesQuery: {
 					type?:  "random" | "response" | "random edges"
-					count?: >=-9223372036854775808 & <=9223372036854775807 & int
+					count?: int64
 				} @cuetsy(kind="interface")
 				#USAQuery: {
 					mode?:   string
@@ -79,7 +79,7 @@ kindsys.Composable & kindsys.Composable & {
 					states?: [...string]
 				} @cuetsy(kind="interface")
 				#CSVWave: {
-					timeStep?:  >=-9223372036854775808 & <=9223372036854775807 & int
+					timeStep?:  int64
 					name?:      string
 					valuesCSV?: string
 					labels?:    string

@@ -28,12 +28,12 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 				MapViewConfig: {
 					id:         string | *"zero"
-					lat?:       int & >=-9223372036854775808 & <=9223372036854775807 | *0
-					lon?:       int & >=-9223372036854775808 & <=9223372036854775807 | *0
-					zoom?:      int & >=-9223372036854775808 & <=9223372036854775807 | *1
-					minZoom?:   >=-9223372036854775808 & <=9223372036854775807 & int
-					maxZoom?:   >=-9223372036854775808 & <=9223372036854775807 & int
-					padding?:   >=-9223372036854775808 & <=9223372036854775807 & int
+					lat?:       int64 | *0
+					lon?:       int64 | *0
+					zoom?:      int64 | *1
+					minZoom?:   int64
+					maxZoom?:   int64
+					padding?:   int64
 					allLayers?: bool | *true
 					lastOnly?:  bool
 					layer?:     string

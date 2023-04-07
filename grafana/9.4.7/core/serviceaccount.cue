@@ -22,9 +22,9 @@ lineage: {
 	seqs: [{
 		schemas: [{
 			// ID is the unique identifier of the service account in the database.
-			id: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(ToMetadata="sys")
+			id: int64 @grafanamaturity(ToMetadata="sys")
 			// OrgId is the ID of an organisation the service account belongs to.
-			orgId: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(ToMetadata="sys")
+			orgId: int64 @grafanamaturity(ToMetadata="sys")
 			// Name of the service account.
 			name: string
 			// Login of the service account.
@@ -35,7 +35,7 @@ lineage: {
 			role: #OrgRole @grafanamaturity(ToMetadata="kind")
 			// Tokens is the number of active tokens for the service account.
 			// Tokens are used to authenticate the service account against Grafana.
-			tokens: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(ToMetadata="kind")
+			tokens: int64 @grafanamaturity(ToMetadata="kind")
 			// AvatarUrl is the service account's avatar URL. It allows the frontend to display a picture in front
 			// of the service account.
 			avatarUrl: string @grafanamaturity(ToMetadata="kind")

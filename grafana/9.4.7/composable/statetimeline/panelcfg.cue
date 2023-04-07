@@ -35,8 +35,8 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 				PanelFieldConfig: {
 					ui.HideableFieldConfig
-					lineWidth?:   int & >=0 & <=4294967295 & <=10 | *0
-					fillOpacity?: int & >=0 & <=4294967295 & <=100 | *70
+					lineWidth?:   uint32 & <=10 | *0
+					fillOpacity?: uint32 & <=100 | *70
 				} @cuetsy(kind="interface")
 			}]
 		}]

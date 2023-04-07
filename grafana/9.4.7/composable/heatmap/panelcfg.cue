@@ -33,15 +33,15 @@ kindsys.Composable & {
 					// Controls the color scale
 					scale?: HeatmapColorScale
 					// Controls the exponent when scale is set to exponential
-					exponent: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					exponent: float32
 					// Controls the number of color steps
-					steps: >=2 & <=128 & int
+					steps: uint & >=2 & <=128
 					// Reverses the color scheme
 					reverse: bool
 					// Sets the minimum value for the color scale
-					min?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					min?: float32
 					// Sets the maximum value for the color scale
-					max?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					max?: float32
 				} @cuetsy(kind="interface")
 				// Configuration options for the yAxis
 				YAxisConfig: {
@@ -52,25 +52,25 @@ kindsys.Composable & {
 					// Reverses the yAxis
 					reverse?: bool
 					// Controls the number of decimals for yAxis values
-					decimals?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					decimals?: float32
 					// Sets the minimum value for the yAxis
-					min?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					min?: float32
 					// Sets the maximum value for the yAxis
-					max?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					max?: float32
 				} @cuetsy(kind="interface")
 				// Controls cell value options
 				CellValues: {
 					// Controls the cell value unit
 					unit?: string
 					// Controls the number of decimals for cell values
-					decimals?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					decimals?: float32
 				} @cuetsy(kind="interface")
 				// Controls the value filter range
 				FilterValueRange: {
 					// Sets the filter range to values less than or equal to the given value
-					le?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					le?: float32
 					// Sets the filter range to values greater than or equal to the given value
-					ge?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					ge?: float32
 				} @cuetsy(kind="interface")
 				// Controls tooltip options
 				HeatmapTooltip: {
@@ -123,9 +123,9 @@ kindsys.Composable & {
 					// Controls the display of the value in the cell
 					showValue: ui.VisibilityMode | *"auto"
 					// Controls gap between cells
-					cellGap?: int & >=0 & <=255 & >=0 & <=25 | *1
+					cellGap?: uint8 & >=0 & <=25 | *1
 					// Controls cell radius
-					cellRadius?: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0
+					cellRadius?: float32
 					// Controls cell value unit
 					cellValues?: CellValues | *{}
 					// Controls yAxis placement

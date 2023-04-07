@@ -31,22 +31,22 @@ kindsys.Composable & {
 					// Controls the orientation of the bar chart, either vertical or horizontal.
 					orientation: common.VizOrientation | *"auto"
 					// Controls the radius of each bar.
-					barRadius?: >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308 & >=0 & <=0.5 | *0
+					barRadius?: float64 & >=0 & <=0.5 | *0
 					// Controls the rotation of the x axis labels.
-					xTickLabelRotation: int & >=-2147483648 & <=2147483647 & >=-90 & <=90 | *0
+					xTickLabelRotation: int32 & >=-90 & <=90 | *0
 					// Sets the max length that a label can have before it is truncated.
-					xTickLabelMaxLength: >=0 & <=2147483647 & int
+					xTickLabelMaxLength: int32 & >=0
 					// Controls the spacing between x axis labels.
 					// negative values indicate backwards skipping behavior
-					xTickLabelSpacing?: int & >=-2147483648 & <=2147483647 | *0
+					xTickLabelSpacing?: int32 | *0
 					// Controls whether bars are stacked or not, either normally or in percent mode.
 					stacking: common.StackingMode | *"none"
 					// This controls whether values are shown on top or to the left of bars.
 					showValue: common.VisibilityMode | *"auto"
 					// Controls the width of bars. 1 = Max width, 0 = Min width.
-					barWidth: >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308 & >=0 & <=1 | *0.97
+					barWidth: float64 & >=0 & <=1 | *0.97
 					// Controls the width of groups. 1 = max with, 0 = min width.
-					groupWidth: >=-1.797693134862315708145274237317043567981e+308 & <=1.797693134862315708145274237317043567981e+308 & >=0 & <=1 | *0.7
+					groupWidth: float64 & >=0 & <=1 | *0.7
 					// Enables mode which highlights the entire bar area and shows tooltip when cursor
 					// hovers over highlighted area
 					fullHighlight: bool | *false
@@ -56,9 +56,9 @@ kindsys.Composable & {
 					common.HideableFieldConfig
 
 					// Controls line width of the bars.
-					lineWidth?: int & >=-2147483648 & <=2147483647 & >=0 & <=10 | *1
+					lineWidth?: int32 & >=0 & <=10 | *1
 					// Controls the fill opacity of the bars.
-					fillOpacity?: int & >=-2147483648 & <=2147483647 & >=0 & <=100 | *80
+					fillOpacity?: int32 & >=0 & <=100 | *80
 					// Set the mode of the gradient fill. Fill gradient is based on the line color. To change the color, use the standard color scheme field option.
 					// Gradient appearance is influenced by the Fill opacity setting.
 					gradientMode?: common.GraphGradientMode | *"none"

@@ -22,7 +22,7 @@ kindsys.Composable & kindsys.Composable & {
 				SeriesMapping: "auto" | "manual"                   @cuetsy(kind="enum")
 				ScatterShow:   "points" | "lines" | "points+lines" @cuetsy(kind="enum", memberNames="Points|Lines|PointsAndLines")
 				XYDimensionConfig: {
-					frame: >=0 & <=2147483647 & int
+					frame: int32 & >=0
 					x?:    string
 					exclude?: [...string]
 				} @cuetsy(kind="interface")
@@ -34,7 +34,7 @@ kindsys.Composable & kindsys.Composable & {
 					lineColor?:  common.ColorDimensionConfig
 					pointColor?: common.ColorDimensionConfig
 					labelValue?: common.TextDimensionConfig
-					lineWidth?:  >=0 & <=2147483647 & int
+					lineWidth?:  int32 & >=0
 					lineStyle?:  common.LineStyle
 					label?:      common.VisibilityMode | *"auto"
 				} @cuetsy(kind="interface",TSVeneer="type")

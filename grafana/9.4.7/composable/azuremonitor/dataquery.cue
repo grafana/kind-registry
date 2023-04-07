@@ -68,7 +68,7 @@ kindsys.Composable & kindsys.Composable & {
 					// Maximum number of records to return. Defaults to 10.
 					top?: string
 					// Time grains that are supported by the metric.
-					allowedTimeGrainsMs?: [...int & >=-9223372036854775808 & <=9223372036854775807]
+					allowedTimeGrainsMs?: [...int64]
 
 					// Aliases can be set to modify the legend labels. e.g. {{ resourceGroup }}. See docs for more detail.
 					alias?: string

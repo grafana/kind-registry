@@ -44,10 +44,10 @@ lineage: {
 			}
 
 			// Dashboard version when this was saved (zero if unknown)
-			schemaVersion?: >=0 & <=65535 & int
+			schemaVersion?: uint16
 
 			// panel version, incremented each time the dashboard is updated.
-			version: >=-9223372036854775808 & <=9223372036854775807 & int @grafanamaturity(NeedsExpertReview)
+			version: int64 @grafanamaturity(NeedsExpertReview)
 
 			// TODO: should be the same panel schema defined in dashboard
 			// Typescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;
@@ -58,14 +58,14 @@ lineage: {
 			// Object storage metadata
 			meta?: #LibraryElementDTOMeta @grafanamaturity(ToMetadata="sys")
 			#LibraryElementDTOMetaUser: {
-				id:        >=-9223372036854775808 & <=9223372036854775807 & int
+				id:        int64
 				name:      string
 				avatarUrl: string
 			} @cuetsy(kind="interface") @grafanamaturity(NeedsExpertReview)
 			#LibraryElementDTOMeta: {
 				folderName:          string
 				folderUid:           string @grafanamaturity(ToMetadata="sys")
-				connectedDashboards: >=-9223372036854775808 & <=9223372036854775807 & int
+				connectedDashboards: int64
 				created:             time.Time & {
 					string
 				}

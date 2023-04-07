@@ -25,7 +25,7 @@ kindsys.Composable & {
 					ui.OptionsWithTimezones
 
 					//Set the height of the rows
-					rowHeight: >=-340282346638528859811704183484516925440.0 & <=340282346638528859811704183484516925440.0 & >=0 & <=1 | *0.9
+					rowHeight: float32 & >=0 & <=1 | *0.9
 					//Show values on the columns
 					showValue: ui.VisibilityMode | *"auto"
 					//Controls the column width
@@ -33,8 +33,8 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 				PanelFieldConfig: {
 					ui.HideableFieldConfig
-					lineWidth?:   int & >=0 & <=4294967295 & <=10 | *1
-					fillOpacity?: int & >=0 & <=4294967295 & <=100 | *70
+					lineWidth?:   uint32 & <=10 | *1
+					fillOpacity?: uint32 & <=100 | *70
 				} @cuetsy(kind="interface")
 			}]
 		}]

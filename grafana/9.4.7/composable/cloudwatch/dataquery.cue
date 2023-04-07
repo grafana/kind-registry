@@ -59,7 +59,7 @@ kindsys.Composable & kindsys.Composable & {
 					groupBy?:          #QueryEditorArrayExpression
 					orderBy?:          #QueryEditorFunctionExpression
 					orderByDirection?: string
-					limit?:            >=-9223372036854775808 & <=9223372036854775807 & int
+					limit?:            int64
 				} @cuetsy(kind="interface")
 				#QueryEditorFunctionExpression: {
 					type: #QueryEditorExpressionType & {
@@ -101,8 +101,8 @@ kindsys.Composable & kindsys.Composable & {
 					name?:  string
 					value?: #QueryEditorOperatorType | [...#QueryEditorOperatorType]
 				} @cuetsy(kind="interface")
-				#QueryEditorOperatorValueType: #QueryEditorOperatorType | [...#QueryEditorOperatorType]             @cuetsy(kind="type")
-				#QueryEditorOperatorType:      string | bool | int & >=-9223372036854775808 & <=9223372036854775807 @cuetsy(kind="type")
+				#QueryEditorOperatorValueType: #QueryEditorOperatorType | [...#QueryEditorOperatorType] @cuetsy(kind="type")
+				#QueryEditorOperatorType:      string | bool | int64                                    @cuetsy(kind="type")
 				#QueryEditorProperty: {
 					type:  #QueryEditorPropertyType
 					name?: string

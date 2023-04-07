@@ -20,7 +20,7 @@ kindsys.Composable & {
 					onlyFromThisDashboard: bool | *false
 					onlyInTimeRange:       bool | *false
 					tags: [...string]
-					limit:           int & >=0 & <=4294967295 | *10
+					limit:           uint32 | *10
 					showUser:        bool | *true
 					showTime:        bool | *true
 					showTags:        bool | *true

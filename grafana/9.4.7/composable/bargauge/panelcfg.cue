@@ -24,8 +24,8 @@ kindsys.Composable & {
 					displayMode:  common.BarGaugeDisplayMode | *"gradient"
 					valueMode:    common.BarGaugeValueMode | *"color"
 					showUnfilled: bool | *true
-					minVizWidth:  int & >=0 & <=4294967295 | *0
-					minVizHeight: int & >=0 & <=4294967295 | *10
+					minVizWidth:  uint32 | *0
+					minVizHeight: uint32 | *10
 				} @cuetsy(kind="interface")
 			}]
 		}]

@@ -24,9 +24,9 @@ kindsys.Composable & {
 					common.OptionsWithTooltip
 
 					//Size of each bucket
-					bucketSize?: >=-2147483648 & <=2147483647 & int
+					bucketSize?: int32
 					//Offset buckets by this amount
-					bucketOffset?: int & >=-2147483648 & <=2147483647 | *0
+					bucketOffset?: int32 | *0
 					//Combines multiple series into a single histogram
 					combine?: bool
 				} @cuetsy(kind="interface")
@@ -35,9 +35,9 @@ kindsys.Composable & {
 					common.HideableFieldConfig
 
 					// Controls line width of the bars.
-					lineWidth?: int & >=0 & <=4294967295 & <=10 | *1
+					lineWidth?: uint32 & <=10 | *1
 					// Controls the fill opacity of the bars.
-					fillOpacity?: int & >=0 & <=4294967295 & <=100 | *80
+					fillOpacity?: uint32 & <=100 | *80
 					// Set the mode of the gradient fill. Fill gradient is based on the line color. To change the color, use the standard color scheme field option.
 					// Gradient appearance is influenced by the Fill opacity setting.
 					gradientMode?: common.GraphGradientMode | *"none"
