@@ -25,7 +25,9 @@ kindsys.Composable & kindsys.Composable & {
 				// @deprecated, now use queryType.
 				range?: bool
 				// @deprecated, now use queryType.
-				instant?:             bool
+				instant?: bool
+				// Used to set step value for range queries.
+				step?:                string
 				#QueryEditorMode:     "code" | "builder"                         @cuetsy(kind="enum")
 				#LokiQueryType:       "range" | "instant" | "stream"             @cuetsy(kind="enum")
 				#SupportingQueryType: "logsVolume" | "logsSample" | "dataSample" @cuetsy(kind="enum")
