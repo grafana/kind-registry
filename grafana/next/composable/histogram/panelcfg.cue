@@ -1,3 +1,5 @@
+package kind
+
 import (
 	"github.com/grafana/kindsys"
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
