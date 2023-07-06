@@ -1,3 +1,5 @@
+package kind
+
 import "github.com/grafana/kindsys"
 
 kindsys.Composable & kindsys.Composable & {
