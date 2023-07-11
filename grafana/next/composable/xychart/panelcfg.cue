@@ -20,20 +20,20 @@ kindsys.Composable & kindsys.Composable & {
 					x?:    string
 					exclude?: [...string]
 				} @cuetsy(kind="interface")
-				ScatterFieldConfig: {
+				FieldConfig: {
 					common.HideableFieldConfig
 					common.AxisConfig
 					show?:       ScatterShow & (*"points" | _)
 					pointSize?:  common.ScaleDimensionConfig
-					lineColor?:  common.ColorDimensionConfig
 					pointColor?: common.ColorDimensionConfig
-					labelValue?: common.TextDimensionConfig
+					lineColor?:  common.ColorDimensionConfig
 					lineWidth?:  int32 & >=0
 					lineStyle?:  common.LineStyle
 					label?:      common.VisibilityMode & (*"auto" | _)
+					labelValue?: common.TextDimensionConfig
 				} @cuetsy(kind="interface",TSVeneer="type")
 				ScatterSeriesConfig: {
-					ScatterFieldConfig
+					FieldConfig
 					x?:    string
 					y?:    string
 					name?: string
