@@ -2,10 +2,10 @@ package kind
 
 import "github.com/grafana/kindsys"
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "Debug"+"PanelCfg" & "Debug"+"PanelCfg"
-	schemaInterface: "PanelCfg" & "PanelCfg"
+	name:            "Debug" + "PanelCfg"
+	schemaInterface: "PanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -22,7 +22,7 @@ kindsys.Composable & kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "Debug"+"PanelCfg" & "Debug"+"PanelCfg"
+		name: "Debug" + "PanelCfg"
 		lenses: []
 	}
 }

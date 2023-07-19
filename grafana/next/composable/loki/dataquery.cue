@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "Loki"+"DataQuery" & "Loki"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "Loki" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -36,7 +36,7 @@ kindsys.Composable & kindsys.Composable & {
 				#LokiQueryDirection:  "forward" | "backward"                     @cuetsy(kind="enum")
 			}
 		}]
-		name: "Loki"+"DataQuery" & "Loki"+"DataQuery"
+		name: "Loki" + "DataQuery"
 		lenses: []
 	}
 }

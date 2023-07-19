@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "XYChart"+"PanelCfg" & "XYChart"+"PanelCfg"
-	schemaInterface: "PanelCfg" & "PanelCfg"
+	name:            "XYChart" + "PanelCfg"
+	schemaInterface: "PanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -47,7 +47,7 @@ kindsys.Composable & kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "XYChart"+"PanelCfg" & "XYChart"+"PanelCfg"
+		name: "XYChart" + "PanelCfg"
 		lenses: []
 	}
 }

@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "merged"
-	name:            "AzureMonitor"+"DataQuery" & "AzureMonitor"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "AzureMonitor" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -212,7 +212,7 @@ kindsys.Composable & kindsys.Composable & {
 				#GrafanaTemplateVariableQuery: #AppInsightsMetricNameQuery | #AppInsightsGroupByQuery | #SubscriptionsQuery | #ResourceGroupsQuery | #ResourceNamesQuery | #MetricNamespaceQuery | #MetricDefinitionsQuery | #MetricNamesQuery | #WorkspacesQuery | #UnknownQuery @cuetsy(kind="type")
 			}
 		}]
-		name: "AzureMonitor"+"DataQuery" & "AzureMonitor"+"DataQuery"
+		name: "AzureMonitor" + "DataQuery"
 		lenses: []
 	}
 }

@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "Prometheus"+"DataQuery" & "Prometheus"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "Prometheus" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -36,7 +36,7 @@ kindsys.Composable & kindsys.Composable & {
 				#PromQueryFormat: "time_series" | "table" | "heatmap" @cuetsy(kind="type")
 			}
 		}]
-		name: "Prometheus"+"DataQuery" & "Prometheus"+"DataQuery"
+		name: "Prometheus" + "DataQuery"
 		lenses: []
 	}
 }

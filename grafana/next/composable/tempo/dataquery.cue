@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "Tempo"+"DataQuery" & "Tempo"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "Tempo" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -61,7 +61,7 @@ kindsys.Composable & kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "Tempo"+"DataQuery" & "Tempo"+"DataQuery"
+		name: "Tempo" + "DataQuery"
 		lenses: []
 	}
 }

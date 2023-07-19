@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "GrafanaPyroscope"+"DataQuery" & "GrafanaPyroscope"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "GrafanaPyroscope" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -26,7 +26,7 @@ kindsys.Composable & kindsys.Composable & {
 				#PhlareQueryType: "metrics" | "profile" | *"both" @cuetsy(kind="type")
 			}
 		}]
-		name: "GrafanaPyroscope"+"DataQuery" & "GrafanaPyroscope"+"DataQuery"
+		name: "GrafanaPyroscope" + "DataQuery"
 		lenses: []
 	}
 }

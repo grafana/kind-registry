@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "merged"
-	name:            "GoogleCloudMonitoring"+"DataQuery" & "GoogleCloudMonitoring"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "GoogleCloudMonitoring" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -170,7 +170,7 @@ kindsys.Composable & kindsys.Composable & {
 				#MetricFindQueryTypes: "projects" | "services" | "defaultProject" | "metricTypes" | "labelKeys" | "labelValues" | "resourceTypes" | "aggregations" | "aligners" | "alignmentPeriods" | "selectors" | "sloServices" | "slo" @cuetsy(kind="enum", memberNames="Projects|Services|DefaultProject|MetricTypes|LabelKeys|LabelValues|ResourceTypes|Aggregations|Aligners|AlignmentPeriods|Selectors|SLOServices|SLO")
 			}
 		}]
-		name: "GoogleCloudMonitoring"+"DataQuery" & "GoogleCloudMonitoring"+"DataQuery"
+		name: "GoogleCloudMonitoring" + "DataQuery"
 		lenses: []
 	}
 }

@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "Parca"+"DataQuery" & "Parca"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "Parca" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -22,7 +22,7 @@ kindsys.Composable & kindsys.Composable & {
 				#ParcaQueryType: "metrics" | "profile" | *"both" @cuetsy(kind="type")
 			}
 		}]
-		name: "Parca"+"DataQuery" & "Parca"+"DataQuery"
+		name: "Parca" + "DataQuery"
 		lenses: []
 	}
 }

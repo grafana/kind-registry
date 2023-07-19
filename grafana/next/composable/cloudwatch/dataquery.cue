@@ -5,10 +5,10 @@ import (
 	"github.com/grafana/grafana/packages/grafana-schema/src/common"
 )
 
-kindsys.Composable & kindsys.Composable & {
+kindsys.Composable & {
 	maturity:        "experimental"
-	name:            "CloudWatch"+"DataQuery" & "CloudWatch"+"DataQuery"
-	schemaInterface: "DataQuery" & "DataQuery"
+	name:            "CloudWatch" + "DataQuery"
+	schemaInterface: "DataQuery"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -190,7 +190,7 @@ kindsys.Composable & kindsys.Composable & {
 				// #CloudWatchDefaultQuery: #CloudWatchLogsQuery & #CloudWatchMetricsQuery @cuetsy(kind="type")
 			}
 		}]
-		name: "CloudWatch"+"DataQuery" & "CloudWatch"+"DataQuery"
+		name: "CloudWatch" + "DataQuery"
 		lenses: []
 	}
 }
