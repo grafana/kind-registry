@@ -32,8 +32,6 @@ kindsys.Composable & {
 					serviceMapIncludeNamespace?: bool
 					// Defines the maximum number of traces that are returned from Tempo
 					limit?: int64
-					// Use the streaming API to get partial results as they are available
-					streaming?: bool
 					filters: [...#TraceqlFilter]
 				} @cuetsy(kind="interface") @grafana(TSVeneer="type")
 
