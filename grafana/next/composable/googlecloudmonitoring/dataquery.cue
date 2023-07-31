@@ -19,7 +19,7 @@ kindsys.Composable & {
 					// GCM query type.
 					// queryType: #QueryType
 					// Time Series List sub-query properties.
-					timeSeriesList?: #TimeSeriesList | #AnnotationQuery
+					timeSeriesList?: #TimeSeriesList
 					// Time Series sub-query properties.
 					timeSeriesQuery?: #TimeSeriesQuery
 					// SLO sub-query properties.
@@ -48,6 +48,11 @@ kindsys.Composable & {
 					// Data view, defaults to FULL.
 					view?: string
 
+					// Annotation title.
+					title?: string
+					// Annotation text.
+					text?: string
+
 					// Only present if a preprocessor is selected. Reducer applied across a set of time-series values. Defaults to REDUCE_NONE.
 					secondaryCrossSeriesReducer?: string
 					// Only present if a preprocessor is selected. Alignment period to use when regularizing data. Defaults to cloud-monitoring-auto.
@@ -64,14 +69,6 @@ kindsys.Composable & {
 
 				// Types of pre-processor available. Defined by the metric.
 				#PreprocessorType: "none" | "rate" | "delta" @cuetsy(kind="enum")
-
-				// Annotation sub-query properties.
-				#AnnotationQuery: #TimeSeriesList & {
-					// Annotation title.
-					title?: string
-					// Annotation text.
-					text?: string
-				} @cuetsy(kind="interface")
 
 				// Time Series sub-query properties.
 				#TimeSeriesQuery: {
@@ -139,7 +136,7 @@ kindsys.Composable & {
 				#ValueTypes:     "VALUE_TYPE_UNSPECIFIED" | "BOOL" | "INT64" | "DOUBLE" | "STRING" | "DISTRIBUTION" | "MONEY"                                                                                                                                                                                                                                                                                 @cuetsy(kind="enum")
 				#AlignmentTypes: "ALIGN_DELTA" | "ALIGN_RATE" | "ALIGN_INTERPOLATE" | "ALIGN_NEXT_OLDER" | "ALIGN_MIN" | "ALIGN_MAX" | "ALIGN_MEAN" | "ALIGN_COUNT" | "ALIGN_SUM" | "ALIGN_STDDEV" | "ALIGN_COUNT_TRUE" | "ALIGN_COUNT_FALSE" | "ALIGN_FRACTION_TRUE" | "ALIGN_PERCENTILE_99" | "ALIGN_PERCENTILE_95" | "ALIGN_PERCENTILE_50" | "ALIGN_PERCENTILE_05" | "ALIGN_PERCENT_CHANGE" | "ALIGN_NONE" @cuetsy(kind="enum")
 
-				// @deprecated Use AnnotationQuery instead. Legacy annotation query properties for migration purposes.
+				// @deprecated Use TimeSeriesList instead. Legacy annotation query properties for migration purposes.
 				#LegacyCloudMonitoringAnnotationQuery: {
 					// GCP project to execute the query against.
 					projectName: string
