@@ -1,4 +1,4 @@
-package kind
+package grafanaplugin
 
 import "github.com/grafana/kindsys"
 
