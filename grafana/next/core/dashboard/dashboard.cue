@@ -588,6 +588,9 @@ lineage: {
 				// See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 				timeShift?: string
 
+				// Controls if the timeFrom or timeShift overrides are shown in the panel header
+				hideTimeOverride?: bool
+
 				// Dynamically load the panel
 				libraryPanel?: #LibraryPanelRef
 
