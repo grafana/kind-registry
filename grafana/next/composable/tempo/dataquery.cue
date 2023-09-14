@@ -32,6 +32,8 @@ kindsys.Composable & {
 					serviceMapIncludeNamespace?: bool
 					// Defines the maximum number of traces that are returned from Tempo
 					limit?: int64
+					// Defines the maximum number of spans per spanset that are returned from Tempo
+					spss?: int64
 					filters: [...#TraceqlFilter]
 					// Filters that are used to query the metrics summary
 					groupBy?: [...#TraceqlFilter]
