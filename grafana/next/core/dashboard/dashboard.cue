@@ -179,8 +179,6 @@ lineage: {
 
 			// A variable is a placeholder for a value. You can use variables in metric queries and in panel titles.
 			#VariableModel: {
-				// Unique numeric identifier for the variable.
-				id: string | *"00000000-0000-0000-0000-000000000000"
 				// Type of variable
 				type: #VariableType
 				// Name of variable
@@ -188,9 +186,9 @@ lineage: {
 				// Optional display name
 				label?: string
 				// Visibility configuration for the variable
-				hide: #VariableHide
+				hide?: #VariableHide
 				// Whether the variable value should be managed by URL query params or not
-				skipUrlSync: bool | *false
+				skipUrlSync?: bool | *false
 				// Description of variable. It can be defined but `null`.
 				description?: string
 				// Query used to fetch values for a variable
@@ -199,8 +197,6 @@ lineage: {
 				}
 				// Data source used to fetch values for a variable. It can be defined but `null`.
 				datasource?: #DataSourceRef
-				// Format to use while fetching all values from data source, eg: wildcard, glob, regex, pipe, etc.
-				allFormat?: string
 				// Shows current selected variable text/value on the dashboard
 				current?: #VariableOption
 				// Whether multiple values can be selected or not from variable value list
@@ -208,6 +204,8 @@ lineage: {
 				// Options that can be selected for a variable.
 				options?: [...#VariableOption]
 				refresh?: #VariableRefresh
+				// Options sort order
+				sort?: #VariableSort
 				...
 			} @cuetsy(kind="interface") @grafana(TSVeneer="type") @grafanamaturity(NeedsExpertReview)
 
@@ -241,10 +239,6 @@ lineage: {
 			// `5`: Alphabetical Case Insensitive ASC
 			// `6`: Alphabetical Case Insensitive DESC
 			#VariableSort: 0 | 1 | 2 | 3 | 4 | 5 | 6 @cuetsy(kind="enum",memberNames="disabled|alphabeticalAsc|alphabeticalDesc|numericalAsc|numericalDesc|alphabeticalCaseInsensitiveAsc|alphabeticalCaseInsensitiveDesc")
-
-			// Loading status
-			// Accepted values are `NotStarted` (the request is not started), `Loading` (waiting for response), `Streaming` (pulling continuous data), `Done` (response received successfully) or `Error` (failed request).
-			#LoadingState: "NotStarted" | "Loading" | "Streaming" | "Done" | "Error" @cuetsy(kind="enum")
 
 			// Ref to a DataSource instance
 			#DataSourceRef: {
