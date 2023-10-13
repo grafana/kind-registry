@@ -174,6 +174,9 @@ lineage: {
 
 				// TODO -- this should not exist here, it is based on the --grafana-- datasource
 				type?: string @grafanamaturity(NeedsExpertReview)
+
+				// Set to 1 for the standard annotation query all dashboards have by default.
+				builtIn?: number | *0
 				...
 			} @cuetsy(kind="interface") @grafana(TSVeneer="type") @grafanamaturity(NeedsExpertReview)
 
