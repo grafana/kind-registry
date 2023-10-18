@@ -134,7 +134,7 @@ kindsys.Composable & {
 					// Values to filter by.
 					filters: [...string]
 				} @cuetsy(kind="interface")
-				#ResultFormat: "table" | "time_series" | "trace" @cuetsy(kind="enum", memberNames="Table|TimeSeries|Trace")
+				#ResultFormat: "table" | "time_series" | "trace" | "logs" @cuetsy(kind="enum", memberNames="Table|TimeSeries|Trace|Logs")
 				#AzureResourceGraphQuery: {
 					// Azure Resource Graph KQL query to be executed.
 					query?: string
