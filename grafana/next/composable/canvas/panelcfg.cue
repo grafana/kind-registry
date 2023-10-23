@@ -37,7 +37,7 @@ kindsys.Composable & {
 					color?: ui.ColorDimensionConfig
 					width?: float64
 				} @cuetsy(kind="interface")
-				HttpRequestMethod: "GET" | "POST" @cuetsy(kind="enum", memberNames="GET|POST")
+				HttpRequestMethod: "GET" | "POST" | "PUT" @cuetsy(kind="enum", memberNames="GET|POST|PUT")
 				ConnectionCoordinates: {
 					x: float64
 					y: float64
