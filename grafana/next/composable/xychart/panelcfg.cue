@@ -13,8 +13,11 @@ kindsys.Composable & {
 		schemas: [{
 			version: [0, 0]
 			schema: {
+				// Auto is "table" in the UI
 				SeriesMapping: "auto" | "manual"                   @cuetsy(kind="enum")
 				ScatterShow:   "points" | "lines" | "points+lines" @cuetsy(kind="enum", memberNames="Points|Lines|PointsAndLines")
+
+				// Configuration for the Table/Auto mode
 				XYDimensionConfig: {
 					frame: int32 & >=0
 					x?:    string
@@ -42,7 +45,11 @@ kindsys.Composable & {
 					common.OptionsWithLegend
 					common.OptionsWithTooltip
 					seriesMapping?: SeriesMapping
-					dims:           XYDimensionConfig
+
+					// Table Mode (auto)
+					dims: XYDimensionConfig
+
+					// Manual Mode
 					series: [...ScatterSeriesConfig]
 				} @cuetsy(kind="interface")
 			}
