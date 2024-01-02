@@ -17,6 +17,7 @@ kindsys.Composable & {
 					common.SingleStatBaseOptions
 					showThresholdLabels:  bool | *false
 					showThresholdMarkers: bool | *true
+					sizing:               common.BarGaugeSizing & (*"auto" | _)
 					minVizWidth:          uint32 | *75
 					minVizHeight:         uint32 | *75
 				} @cuetsy(kind="interface")

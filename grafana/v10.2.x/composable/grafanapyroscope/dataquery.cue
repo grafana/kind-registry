@@ -17,6 +17,8 @@ kindsys.Composable & {
 
 				// Specifies the query label selectors.
 				labelSelector: string | *"{}"
+				// Specifies the query span selectors.
+				spanSelector?: [...string]
 				// Specifies the type of profile to query.
 				profileTypeId: string
 				// Allows to group the results.
