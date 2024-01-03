@@ -446,6 +446,8 @@ lineage: {
 				disabled?: bool
 				// Optional frame matcher. When missing it will be applied to all results
 				filter?: #MatcherConfig
+				// Where to pull DataFrames from as input to transformation
+				topic?: "series" | "annotations" | "alertStates"
 				// Options to be passed to the transformer
 				// Valid options depend on the transformer id
 				options: _
