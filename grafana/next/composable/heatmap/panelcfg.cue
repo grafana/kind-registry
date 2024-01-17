@@ -69,7 +69,9 @@ kindsys.Composable & {
 				// Controls tooltip options
 				HeatmapTooltip: {
 					// Controls how the tooltip is shown
-					mode: ui.TooltipDisplayMode
+					mode:       ui.TooltipDisplayMode
+					maxHeight?: number
+					maxWidth?:  number
 					// Controls if the tooltip shows a histogram of the y-axis values
 					yHistogram?: bool
 					// Controls if the tooltip shows a color scale in header
