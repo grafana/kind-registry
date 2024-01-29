@@ -31,7 +31,10 @@ kindsys.Composable & {
 				legendFormat?: string
 				// @deprecated Used to specify how many times to divide max data points by. We use max data points under query options
 				// See https://github.com/grafana/grafana/issues/48081
-				intervalFactor?:  number
+				intervalFactor?: number
+				scope?: {
+					matchers: string
+				}
 				#QueryEditorMode: "code" | "builder"                  @cuetsy(kind="enum")
 				#PromQueryFormat: "time_series" | "table" | "heatmap" @cuetsy(kind="type")
 			}
