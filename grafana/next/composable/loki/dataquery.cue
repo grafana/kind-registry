@@ -30,10 +30,10 @@ kindsys.Composable & {
 				instant?: bool
 				// Used to set step value for range queries.
 				step?:                string
-				#QueryEditorMode:     "code" | "builder"                         @cuetsy(kind="enum")
-				#LokiQueryType:       "range" | "instant" | "stream"             @cuetsy(kind="enum")
-				#SupportingQueryType: "logsVolume" | "logsSample" | "dataSample" @cuetsy(kind="enum")
-				#LokiQueryDirection:  "forward" | "backward"                     @cuetsy(kind="enum")
+				#QueryEditorMode:     "code" | "builder"                                            @cuetsy(kind="enum")
+				#LokiQueryType:       "range" | "instant" | "stream"                                @cuetsy(kind="enum")
+				#SupportingQueryType: "logsVolume" | "logsSample" | "dataSample" | "infiniteScroll" @cuetsy(kind="enum")
+				#LokiQueryDirection:  "forward" | "backward"                                        @cuetsy(kind="enum")
 			}
 		}]
 		name: "Loki" + "DataQuery"
