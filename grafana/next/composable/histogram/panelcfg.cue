@@ -17,10 +17,12 @@ kindsys.Composable & {
 					common.OptionsWithLegend
 					common.OptionsWithTooltip
 
+					//Bucket count (approx)
+					bucketCount?: int32 & >0 | *30
 					//Size of each bucket
 					bucketSize?: int32
 					//Offset buckets by this amount
-					bucketOffset?: int32 | *0
+					bucketOffset?: float32 | *0
 					//Combines multiple series into a single histogram
 					combine?: bool
 				} @cuetsy(kind="interface")
