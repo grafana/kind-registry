@@ -506,6 +506,8 @@ lineage: {
 				external: bool @grafanamaturity(NeedsExpertReview)
 				// external url, if snapshot was shared in external grafana instance
 				externalUrl: string @grafanamaturity(NeedsExpertReview)
+				// original url, url of the dashboard that was snapshotted
+				originalUrl: string @grafanamaturity(NeedsExpertReview)
 				// Unique identifier of the snapshot
 				id: uint32 @grafanamaturity(NeedsExpertReview)
 				// Optional, defined the unique key of the snapshot, required if external is true
@@ -604,6 +606,12 @@ lineage: {
 
 				// Dynamically load the panel
 				libraryPanel?: #LibraryPanelRef
+
+				// Sets panel queries cache timeout. 
+				cacheTimeout?: string
+
+				// Overrides the data source configured time-to-live for a query cache item in milliseconds
+				queryCachingTTL?: number
 
 				// It depends on the panel plugin. They are specified by the Options field in panel plugin schemas.
 				options?: {
