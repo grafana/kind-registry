@@ -1,11 +1,9 @@
 package grafanaplugin
 
-import "github.com/grafana/kindsys"
-
-kindsys.Composable & {
+{
 	maturity:        "experimental"
-	name:            "Debug" + "PanelCfg"
 	schemaInterface: "PanelCfg"
+	name:            "DebugPanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -22,7 +20,7 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "Debug" + "PanelCfg"
+		name: "DebugPanelCfg"
 		lenses: []
 	}
 }

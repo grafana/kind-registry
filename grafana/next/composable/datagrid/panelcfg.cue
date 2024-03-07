@@ -1,11 +1,9 @@
 package grafanaplugin
 
-import "github.com/grafana/kindsys"
-
-kindsys.Composable & {
+{
 	maturity:        "experimental"
-	name:            "Datagrid" + "PanelCfg"
 	schemaInterface: "PanelCfg"
+	name:            "DatagridPanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -15,7 +13,7 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "Datagrid" + "PanelCfg"
+		name: "DatagridPanelCfg"
 		lenses: []
 	}
 }

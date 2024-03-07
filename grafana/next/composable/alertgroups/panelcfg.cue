@@ -1,10 +1,6 @@
 package grafanaplugin
 
-import "github.com/grafana/kindsys"
-
-kindsys.Composable & {
-	name:            "AlertGroups" + "PanelCfg"
-	schemaInterface: "PanelCfg"
+{
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -19,7 +15,9 @@ kindsys.Composable & {
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "AlertGroups" + "PanelCfg"
+		name: "AlertGroupsPanelCfg"
 		lenses: []
 	}
+	schemaInterface: "PanelCfg"
+	name:            "AlertGroupsPanelCfg"
 }
