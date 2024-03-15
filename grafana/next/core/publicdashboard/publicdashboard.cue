@@ -1,8 +1,5 @@
 package kind
 
-import "github.com/grafana/kindsys"
-
-kindsys.Core
 name:        "PublicDashboard"
 maturity:    "merged"
 description: "Public dashboard configuration"

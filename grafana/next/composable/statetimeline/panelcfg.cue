@@ -2,9 +2,8 @@ package grafanaplugin
 
 import ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
-name:            "StateTimelinePanelCfg"
+name:            "StatetimelinePanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -30,6 +29,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "StateTimelinePanelCfg"
 	lenses: []
 }

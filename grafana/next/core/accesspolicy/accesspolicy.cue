@@ -1,8 +1,5 @@
 package kind
 
-import "github.com/grafana/kindsys"
-
-kindsys.Core
 name:              "AccessPolicy"
 maturity:          "merged"
 description:       "Access rules for a scope+role.  NOTE there is a unique constraint on role+scope"

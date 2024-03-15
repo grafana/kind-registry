@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
-name:            "XYChartPanelCfg"
+name:            "XychartPanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -51,6 +50,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "XYChartPanelCfg"
 	lenses: []
 }

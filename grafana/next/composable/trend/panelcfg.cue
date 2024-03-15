@@ -2,6 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
+schemaInterface: "PanelCfg"
+name:            "TrendPanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -17,8 +19,5 @@ lineage: {
 			FieldConfig: common.GraphFieldConfig @cuetsy(kind="interface")
 		}
 	}]
-	name: "TrendPanelCfg"
 	lenses: []
 }
-schemaInterface: "PanelCfg"
-name:            "TrendPanelCfg"

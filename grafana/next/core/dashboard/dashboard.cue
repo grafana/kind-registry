@@ -1,12 +1,10 @@
 package kind
 
 import (
-	"github.com/grafana/kindsys"
 	t "time"
 	"strings"
 )
 
-kindsys.Core
 name:        "Dashboard"
 maturity:    "experimental"
 description: "A Grafana dashboard."

@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
-name:            "CloudWatchDataQuery"
+name:            "CloudwatchDataQuery"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -186,6 +185,5 @@ lineage: {
 			// #CloudWatchDefaultQuery: #CloudWatchLogsQuery & #CloudWatchMetricsQuery @cuetsy(kind="type")
 		}
 	}]
-	name: "CloudWatchDataQuery"
 	lenses: []
 }

@@ -1,12 +1,10 @@
 package kind
 
 import (
-	"github.com/grafana/kindsys"
 	"strings"
 	"time"
 )
 
-kindsys.Core
 name:        "LibraryPanel"
 maturity:    "experimental"
 description: "A standalone panel"

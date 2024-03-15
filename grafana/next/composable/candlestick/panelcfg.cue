@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "CandlestickPanelCfg"
 lineage: {
@@ -53,6 +52,5 @@ lineage: {
 			FieldConfig: common.GraphFieldConfig @cuetsy(kind="interface")
 		}
 	}]
-	name: "CandlestickPanelCfg"
 	lenses: []
 }

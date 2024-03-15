@@ -2,7 +2,6 @@ package grafanaplugin
 
 import ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "CanvasPanelCfg"
 lineage: {
@@ -46,6 +45,7 @@ lineage: {
 				path:        ConnectionPath
 				color?:      ui.ColorDimensionConfig
 				size?:       ui.ScaleDimensionConfig
+				vertices?: [...ConnectionCoordinates]
 			} @cuetsy(kind="interface")
 			CanvasElementOptions: {
 				name: string
@@ -78,6 +78,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "CanvasPanelCfg"
 	lenses: []
 }

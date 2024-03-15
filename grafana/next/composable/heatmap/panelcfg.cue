@@ -2,6 +2,8 @@ package grafanaplugin
 
 import ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
+schemaInterface: "PanelCfg"
+name:            "HeatmapPanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -146,8 +148,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "HeatmapPanelCfg"
 	lenses: []
 }
-schemaInterface: "PanelCfg"
-name:            "HeatmapPanelCfg"

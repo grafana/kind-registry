@@ -1,8 +1,5 @@
 package kind
 
-import "github.com/grafana/kindsys"
-
-kindsys.Core
 name:        "RoleBinding"
 maturity:    "merged"
 description: "Role bindings links a user|team to a configured role"

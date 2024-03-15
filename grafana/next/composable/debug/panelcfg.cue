@@ -1,7 +1,6 @@
 package grafanaplugin
 
 {
-	maturity:        "experimental"
 	schemaInterface: "PanelCfg"
 	name:            "DebugPanelCfg"
 	lineage: {
@@ -20,7 +19,6 @@ package grafanaplugin
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "DebugPanelCfg"
 		lenses: []
 	}
 }

@@ -1,8 +1,5 @@
 package kind
 
-import "github.com/grafana/kindsys"
-
-kindsys.Core
 name:        "Preferences"
 pluralName:  "Preferences"
 maturity:    "merged"

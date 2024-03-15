@@ -2,6 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
+schemaInterface: "PanelCfg"
+name:            "TimeseriesPanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -14,8 +16,5 @@ lineage: {
 			FieldConfig: common.GraphFieldConfig @cuetsy(kind="interface")
 		}
 	}]
-	name: "TimeSeriesPanelCfg"
 	lenses: []
 }
-schemaInterface: "PanelCfg"
-name:            "TimeSeriesPanelCfg"

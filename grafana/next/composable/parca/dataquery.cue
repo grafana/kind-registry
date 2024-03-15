@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
 name:            "ParcaDataQuery"
 lineage: {
@@ -18,6 +17,5 @@ lineage: {
 			#ParcaQueryType: "metrics" | "profile" | *"both" @cuetsy(kind="type")
 		}
 	}]
-	name: "ParcaDataQuery"
 	lenses: []
 }

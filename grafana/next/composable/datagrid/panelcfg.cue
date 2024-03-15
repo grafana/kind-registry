@@ -1,7 +1,6 @@
 package grafanaplugin
 
 {
-	maturity:        "experimental"
 	schemaInterface: "PanelCfg"
 	name:            "DatagridPanelCfg"
 	lineage: {
@@ -13,7 +12,6 @@ package grafanaplugin
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "DatagridPanelCfg"
 		lenses: []
 	}
 }

@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "HistogramPanelCfg"
 lineage: {
@@ -36,6 +35,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "HistogramPanelCfg"
 	lenses: []
 }

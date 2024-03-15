@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "GaugePanelCfg"
 lineage: {
@@ -19,6 +18,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "GaugePanelCfg"
 	lenses: []
 }

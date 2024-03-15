@@ -1,9 +1,8 @@
 package grafanaplugin
 
 {
-	maturity:        "experimental"
 	schemaInterface: "PanelCfg"
-	name:            "NodeGraphPanelCfg"
+	name:            "NodegraphPanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -34,7 +33,6 @@ package grafanaplugin
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "NodeGraphPanelCfg"
 		lenses: []
 	}
 }

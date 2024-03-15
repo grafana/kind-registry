@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
-name:            "PieChartPanelCfg"
+name:            "PiechartPanelCfg"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -34,6 +33,5 @@ lineage: {
 			FieldConfig: common.HideableFieldConfig @cuetsy(kind="interface")
 		}
 	}]
-	name: "PieChartPanelCfg"
 	lenses: []
 }

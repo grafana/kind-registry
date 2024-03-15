@@ -2,7 +2,6 @@ package grafanaplugin
 
 import ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "TablePanelCfg"
 lineage: {
@@ -33,6 +32,5 @@ lineage: {
 			FieldConfig: ui.TableFieldOptions @cuetsy(kind="interface")
 		}
 	}]
-	name: "TablePanelCfg"
 	lenses: []
 }

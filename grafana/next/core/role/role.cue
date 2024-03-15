@@ -1,8 +1,5 @@
 package kind
 
-import "github.com/grafana/kindsys"
-
-kindsys.Core
 name:        "Role"
 maturity:    "merged"
 description: "Roles represent a set of users+teams that should share similar access"

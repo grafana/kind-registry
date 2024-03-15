@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
 name:            "ElasticsearchDataQuery"
 lineage: {
@@ -403,6 +402,5 @@ lineage: {
 			#MetricAggregationWithSettings: #BucketScript | #CumulativeSum | #Derivative | #SerialDiff | #RawData | #RawDocument | #UniqueCount | #Percentiles | #ExtendedStats | #Min | #Max | #Sum | #Average | #MovingAverage | #MovingFunction | #Logs | #Rate | #TopMetrics @cuetsy(kind="type")
 		}
 	}]
-	name: "ElasticsearchDataQuery"
 	lenses: []
 }

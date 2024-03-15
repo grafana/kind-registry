@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "merged"
 schemaInterface: "DataQuery"
-name:            "GoogleCloudMonitoringDataQuery"
+name:            "GooglecloudmonitoringDataQuery"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -175,6 +174,5 @@ lineage: {
 			#MetricFindQueryTypes: "projects" | "services" | "defaultProject" | "metricTypes" | "labelKeys" | "labelValues" | "resourceTypes" | "aggregations" | "aligners" | "alignmentPeriods" | "selectors" | "sloServices" | "slo" @cuetsy(kind="enum", memberNames="Projects|Services|DefaultProject|MetricTypes|LabelKeys|LabelValues|ResourceTypes|Aggregations|Aligners|AlignmentPeriods|Selectors|SLOServices|SLO")
 		}
 	}]
-	name: "GoogleCloudMonitoringDataQuery"
 	lenses: []
 }

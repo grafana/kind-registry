@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "StatPanelCfg"
 lineage: {
@@ -20,6 +19,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "StatPanelCfg"
 	lenses: []
 }

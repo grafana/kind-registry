@@ -1,9 +1,8 @@
 package grafanaplugin
 
 {
-	maturity:        "experimental"
 	schemaInterface: "PanelCfg"
-	name:            "AnnotationsListPanelCfg"
+	name:            "AnnotationslistPanelCfg"
 	lineage: {
 		schemas: [{
 			version: [0, 0]
@@ -22,7 +21,6 @@ package grafanaplugin
 				} @cuetsy(kind="interface")
 			}
 		}]
-		name: "AnnotationsListPanelCfg"
 		lenses: []
 	}
 }

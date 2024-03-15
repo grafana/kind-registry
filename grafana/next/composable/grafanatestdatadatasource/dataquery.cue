@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
-name:            "TestDataDataQuery"
+name:            "GrafanatestdatadatasourceDataQuery"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -90,6 +89,5 @@ lineage: {
 			} @cuetsy(kind="interface")
 		}
 	}]
-	name: "TestDataDataQuery"
 	lenses: []
 }

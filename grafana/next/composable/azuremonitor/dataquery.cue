@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "merged"
 schemaInterface: "DataQuery"
-name:            "AzureMonitorDataQuery"
+name:            "AzuremonitorDataQuery"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -212,6 +211,5 @@ lineage: {
 			#GrafanaTemplateVariableQuery: #AppInsightsMetricNameQuery | #AppInsightsGroupByQuery | #SubscriptionsQuery | #ResourceGroupsQuery | #ResourceNamesQuery | #MetricNamespaceQuery | #MetricDefinitionsQuery | #MetricNamesQuery | #WorkspacesQuery | #UnknownQuery @cuetsy(kind="type")
 		}
 	}]
-	name: "AzureMonitorDataQuery"
 	lenses: []
 }

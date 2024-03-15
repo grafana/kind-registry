@@ -2,7 +2,6 @@ package grafanaplugin
 
 import ui "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "PanelCfg"
 name:            "GeomapPanelCfg"
 lineage: {
@@ -50,6 +49,5 @@ lineage: {
 			MapCenterID: "zero" | "coords" | "fit" @cuetsy(kind="enum",members="Zero|Coordinates|Fit")
 		}
 	}]
-	name: "GeomapPanelCfg"
 	lenses: []
 }

@@ -2,9 +2,8 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
-name:            "GrafanaPyroscopeDataQuery"
+name:            "GrafanapyroscopeDataQuery"
 lineage: {
 	schemas: [{
 		version: [0, 0]
@@ -24,6 +23,5 @@ lineage: {
 			#PyroscopeQueryType: "metrics" | "profile" | *"both" @cuetsy(kind="type")
 		}
 	}]
-	name: "GrafanaPyroscopeDataQuery"
 	lenses: []
 }

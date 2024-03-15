@@ -2,7 +2,6 @@ package grafanaplugin
 
 import "github.com/grafana/grafana/packages/grafana-schema/src/common"
 
-maturity:        "experimental"
 schemaInterface: "DataQuery"
 name:            "LokiDataQuery"
 lineage: {
@@ -32,6 +31,5 @@ lineage: {
 			#LokiQueryDirection:  "forward" | "backward"                                        @cuetsy(kind="enum")
 		}
 	}]
-	name: "LokiDataQuery"
 	lenses: []
 }
