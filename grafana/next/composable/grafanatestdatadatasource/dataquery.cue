@@ -62,7 +62,7 @@ lineage: {
 				last?:   bool
 			} @cuetsy(kind="interface")
 			#NodesQuery: {
-				type?:  "random" | "response_small" | "response_medium" | "random edges"
+				type?:  "random" | "response_small" | "response_medium" | "random edges" | "feature_showcase"
 				count?: int64
 				seed?:  int64
 			} @cuetsy(kind="interface")
