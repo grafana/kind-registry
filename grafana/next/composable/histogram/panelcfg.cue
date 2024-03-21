@@ -24,6 +24,7 @@ lineage: {
 			FieldConfig: {
 				common.AxisConfig
 				common.HideableFieldConfig
+				common.StackableFieldConfig
 
 				// Controls line width of the bars.
 				lineWidth?: uint32 & <=10 | *1
