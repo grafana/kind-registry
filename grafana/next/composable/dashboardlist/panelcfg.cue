@@ -14,6 +14,7 @@ package grafanaplugin
 					showRecentlyViewed: bool | *false
 					showSearch:         bool | *false
 					showHeadings:       bool | *true
+					showFolderNames:    bool | *true
 					maxItems:           int | *10
 					query:              string | *""
 					tags:               [...string] | *[]
