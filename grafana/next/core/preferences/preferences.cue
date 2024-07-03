@@ -32,6 +32,9 @@ lineage: {
 
 				// Cookie preferences
 				cookiePreferences?: #CookiePreferences
+
+				// Navigation preferences
+				navbar?: #NavbarPreference
 			} @cuetsy(kind="interface")
 			#QueryHistoryPreference: {
 				// one of: '' | 'query' | 'starred';
@@ -41,6 +44,9 @@ lineage: {
 				analytics?: {}
 				performance?: {}
 				functional?: {}
+			} @cuetsy(kind="interface")
+			#NavbarPreference: {
+				savedItemIds: [...string]
 			} @cuetsy(kind="interface")
 		}
 	}]
