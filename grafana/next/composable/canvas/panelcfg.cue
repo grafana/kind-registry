@@ -61,7 +61,6 @@ lineage: {
 				background?: BackgroundConfig
 				border?:     LineConfig
 				connections?: [...CanvasConnection]
-				oneClickLinks?: bool
 			} @cuetsy(kind="interface")
 			Options: {
 				// Enable inline editing
