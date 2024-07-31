@@ -46,7 +46,7 @@ lineage: {
 				functional?: {}
 			} @cuetsy(kind="interface")
 			#NavbarPreference: {
-				bookmarkIds: [...string]
+				bookmarkUrls: [...string]
 			} @cuetsy(kind="interface")
 		}
 	}]
