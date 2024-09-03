@@ -16,4 +16,4 @@ Grafana Labs defines experimental features as follows:
 
 ## Usage
 
-This registry is intented to be the source of schemas for as-code tools as [Grok](https://github.com/grafana/grok).
+This registry is intented to be the source of schemas for code generation tools as [cog](https://github.com/grafana/cog).
