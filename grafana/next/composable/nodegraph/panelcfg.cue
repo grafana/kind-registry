@@ -27,9 +27,12 @@ package grafanaplugin
 					// Unit for the secondary stat to override what ever is set in the data frame.
 					secondaryStatUnit?: string
 				}
+				ZoomMode: "cooperative" | "greedy" @cuetsy(kind="enum")
 				Options: {
 					nodes?: NodeOptions
 					edges?: EdgeOptions
+					// How to handle zoom/scroll events in the node graph
+					zoomMode?: ZoomMode
 				} @cuetsy(kind="interface")
 			}
 		}]
