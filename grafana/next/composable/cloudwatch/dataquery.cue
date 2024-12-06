@@ -130,6 +130,7 @@ lineage: {
 				expressions: [...#QueryEditorExpression] | [...#QueryEditorArrayExpression]
 			} @cuetsy(kind="interface")
 			#QueryEditorExpression: #QueryEditorArrayExpression | #QueryEditorPropertyExpression | #QueryEditorGroupByExpression | #QueryEditorFunctionExpression | #QueryEditorFunctionParameterExpression | #QueryEditorOperatorExpression @cuetsy(kind="type")
+			#LogsQueryLanguage:     "CWLI" | "SQL" | "PPL"                                                                                                                                                                                   @cuetsy(kind="enum")
 
 			// Shape of a CloudWatch Logs query
 			#CloudWatchLogsQuery: {
@@ -148,6 +149,8 @@ lineage: {
 				logGroups?: [...#LogGroup]
 				// @deprecated use logGroups
 				logGroupNames?: [...string]
+				// Language used for querying logs, can be CWLI, SQL, or PPL. If empty, the default language is CWLI.
+				queryLanguage?: #LogsQueryLanguage
 			} @cuetsy(kind="interface")
 			#LogGroup: {
 				// ARN of the log group
