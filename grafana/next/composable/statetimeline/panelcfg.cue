@@ -25,6 +25,7 @@ lineage: {
 				perPage?: number & >=1 | *20
 			} @cuetsy(kind="interface")
 			FieldConfig: {
+				ui.AxisConfig
 				ui.HideableFieldConfig
 				lineWidth?:   uint32 & <=10 | *0
 				fillOpacity?: uint32 & <=100 | *70
