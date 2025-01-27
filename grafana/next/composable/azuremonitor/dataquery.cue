@@ -10,6 +10,7 @@ lineage: {
 		schema: {
 			#AzureMonitorQuery: common.DataQuery & {
 				// Azure subscription containing the resource(s) to be queried.
+				// Also used for template variable queries
 				subscription?: string
 
 				// Subscriptions to be queried via Azure Resource Graph.
@@ -26,18 +27,23 @@ lineage: {
 				// @deprecated Legacy template variable support.
 				grafanaTemplateVariableFn?: #GrafanaTemplateVariableQuery
 
-				// Template variables params. These exist for backwards compatiblity with legacy template variables.
+				// Resource group used in template variable queries
 				resourceGroup?: string
-				namespace?:     string
-				resource?:      string
-				region?:        string
+				// Namespace used in template variable queries
+				namespace?: string
+				// Resource used in template variable queries
+				resource?: string
+				// Region used in template variable queries
+				region?: string
+				// Custom namespace used in template variable queries
+				customNamespace?: string
 
 				// Used only for exemplar queries from Prometheus
 				query?: string
 			} @cuetsy(kind="interface") @grafana(TSVeneer="type")
 
 			// Defines the supported queryTypes. GrafanaTemplateVariableFn is deprecated
-			#AzureQueryType: "Azure Monitor" | "Azure Log Analytics" | "Azure Resource Graph" | "Azure Traces" | "Azure Subscriptions" | "Azure Resource Groups" | "Azure Namespaces" | "Azure Resource Names" | "Azure Metric Names" | "Azure Workspaces" | "Azure Regions" | "Grafana Template Variable Function" | "traceql" @cuetsy(kind="enum", memberNames="AzureMonitor|LogAnalytics|AzureResourceGraph|AzureTraces|SubscriptionsQuery|ResourceGroupsQuery|NamespacesQuery|ResourceNamesQuery|MetricNamesQuery|WorkspacesQuery|LocationsQuery|GrafanaTemplateVariableFn|TraceExemplar")
+			#AzureQueryType: "Azure Monitor" | "Azure Log Analytics" | "Azure Resource Graph" | "Azure Traces" | "Azure Subscriptions" | "Azure Resource Groups" | "Azure Namespaces" | "Azure Resource Names" | "Azure Metric Names" | "Azure Workspaces" | "Azure Regions" | "Grafana Template Variable Function" | "traceql" | "Azure Custom Namespaces" | "Azure Custom Metric Names" @cuetsy(kind="enum", memberNames="AzureMonitor|LogAnalytics|AzureResourceGraph|AzureTraces|SubscriptionsQuery|ResourceGroupsQuery|NamespacesQuery|ResourceNamesQuery|MetricNamesQuery|WorkspacesQuery|LocationsQuery|GrafanaTemplateVariableFn|TraceExemplar|CustomNamespacesQuery|CustomMetricNamesQuery")
 			#AzureMetricQuery: {
 				// Array of resource URIs to be queried.
 				resources?: [...#AzureMonitorResource]
