@@ -13,6 +13,8 @@ lineage: {
 				showCommonLabels:         bool
 				showTime:                 bool
 				showLogContextToggle:     bool
+				showControls?:            bool
+				controlsStorageKey?:      string
 				wrapLogMessage:           bool
 				prettifyLogMessage:       bool
 				enableLogDetails:         bool
@@ -27,6 +29,7 @@ lineage: {
 				onClickFilterOutString?: _
 				onClickShowField?:       _
 				onClickHideField?:       _
+				onLogOptionsChange?:     _
 				logRowMenuIconsBefore?:  _
 				logRowMenuIconsAfter?:   _
 				onNewLogsReceived?:      _
